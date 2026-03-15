@@ -1,6 +1,6 @@
 import { 
   LucideIcon, Heart, Lightbulb, BookOpen, Globe, Music, Rocket, 
-  Gamepad2, Activity, Feather, ShieldCheck, Leaf, Scroll
+  Gamepad2, Activity, Feather, ShieldCheck 
 } from 'lucide-react';
 
 export type CategoryId = 
@@ -13,9 +13,7 @@ export type CategoryId =
   | 'game'
   | 'health'
   | 'story'
-  | 'safety'
-  | 'environment'
-  | 'culture';
+  | 'safety';
 
 export interface Theme {
   id: string;
@@ -109,20 +107,6 @@ export const CATEGORIES: Category[] = [
     icon: ShieldCheck,
     color: 'bg-red-500',
     description: '学习安全知识，用技术构建安全的成长环境。'
-  },
-  {
-    id: 'environment',
-    name: '环保绿色家园',
-    icon: Leaf,
-    color: 'bg-green-600',
-    description: '保护地球母亲，探索可持续发展的绿色未来。'
-  },
-  {
-    id: 'culture',
-    name: '传统文化传承',
-    icon: Scroll,
-    color: 'bg-orange-500',
-    description: '弘扬中华优秀传统文化，让古老智慧焕发新生。'
   }
 ];
 
@@ -254,48 +238,6 @@ export const THEMES: Theme[] = [
       '4. 如果匹配度高，显示“找到啦”并报警。'
     ]
   },
-  {
-    id: 'c7',
-    title: '关爱流浪动物',
-    categoryId: 'charity',
-    iconName: '🐕',
-    description: '建立流浪动物档案，帮助它们寻找温暖的家。',
-    coreSkills: ['数据库', '信息发布'],
-    challengeTask: '制作一个流浪猫狗领养平台。',
-    requiredBlocks: ['列表操作', '界面设计'],
-    highlight: '培养爱心，关注城市流浪动物问题。',
-    creationTips: [
-      '记录动物的品种、年龄和性格。',
-      '设计领养申请表单。'
-    ],
-    taskSteps: [
-      '1. 创建动物信息列表。',
-      '2. 展示动物照片和介绍。',
-      '3. 编写领养申请逻辑。',
-      '4. 统计已领养数量。'
-    ]
-  },
-  {
-    id: 'c8',
-    title: '乡村支教助手',
-    categoryId: 'charity',
-    iconName: '🏫',
-    description: '为偏远地区的孩子设计远程互动课程。',
-    coreSkills: ['视频通信', '互动教学'],
-    challengeTask: '设计一堂有趣的远程科普课。',
-    requiredBlocks: ['视频广播', '画笔互动'],
-    highlight: '利用技术促进教育公平。',
-    creationTips: [
-      '加入互动答题环节。',
-      '设计虚拟奖励机制。'
-    ],
-    taskSteps: [
-      '1. 设计课程PPT背景。',
-      '2. 开启摄像头进行直播教学。',
-      '3. 学生端可以通过按键抢答。',
-      '4. 实时统计答题正确率。'
-    ]
-  },
 
   // 💡 生活奇思妙想 (6 themes)
   {
@@ -422,48 +364,6 @@ export const THEMES: Theme[] = [
       '2. 设定专注倒计时（如25分钟）。',
       '3. 如果检测到人脸消失或偏转超过10秒，暂停计时并提醒。',
       '4. 完成计时后播放庆祝动画。'
-    ]
-  },
-  {
-    id: 'l7',
-    title: '智能记账本',
-    categoryId: 'life',
-    iconName: '💰',
-    description: '记录零花钱的收支情况，培养理财观念。',
-    coreSkills: ['变量计算', '数据统计'],
-    challengeTask: '记录一周的开销，并生成饼图。',
-    requiredBlocks: ['变量操作', '画笔绘图'],
-    highlight: '从小养成科学的消费习惯。',
-    creationTips: [
-      '区分“必要支出”和“想要支出”。',
-      '设置储蓄目标进度条。'
-    ],
-    taskSteps: [
-      '1. 输入收入和支出金额。',
-      '2. 选择消费类别（零食、文具）。',
-      '3. 计算余额和总支出。',
-      '4. 绘制消费占比饼图。'
-    ]
-  },
-  {
-    id: 'l8',
-    title: '噪音分贝仪',
-    categoryId: 'life',
-    iconName: '🔊',
-    description: '监测环境噪音，提醒大家保持安静。',
-    coreSkills: ['声音检测', '阈值判断'],
-    challengeTask: '当教室太吵时，自动发出安静提醒。',
-    requiredBlocks: ['响度检测', '条件分支'],
-    highlight: '维护公共秩序，创造良好环境。',
-    creationTips: [
-      '用红绿灯显示噪音等级。',
-      '记录最吵的时间段。'
-    ],
-    taskSteps: [
-      '1. 实时检测麦克风响度。',
-      '2. 设定噪音阈值（如60分贝）。',
-      '3. 超过阈值显示红色警示。',
-      '4. 统计超标次数。'
     ]
   },
 
@@ -594,48 +494,6 @@ export const THEMES: Theme[] = [
       '4. 如果断开，切换为“灭”。'
     ]
   },
-  {
-    id: 'e7',
-    title: '化学元素周期表',
-    categoryId: 'learning',
-    iconName: '🧪',
-    description: '点击元素符号，展示它的性质和用途。',
-    coreSkills: ['列表查询', '交互设计'],
-    challengeTask: '制作一个会说话的互动周期表。',
-    requiredBlocks: ['点击事件', 'TTS朗读'],
-    highlight: '让枯燥的化学知识变得生动直观。',
-    creationTips: [
-      '用不同颜色区分金属和非金属。',
-      '展示元素的原子结构动画。'
-    ],
-    taskSteps: [
-      '1. 绘制元素周期表界面。',
-      '2. 建立元素属性数据库。',
-      '3. 点击元素显示详细信息卡片。',
-      '4. 朗读元素的发现故事。'
-    ]
-  },
-  {
-    id: 'e8',
-    title: '历史朝代歌',
-    categoryId: 'learning',
-    iconName: '👑',
-    description: '通过动画和歌谣，快速记忆中国历史朝代顺序。',
-    coreSkills: ['动画序列', '音频同步'],
-    challengeTask: '制作一个朝代更替的时间轴动画。',
-    requiredBlocks: ['造型切换', '等待时间'],
-    highlight: '轻松掌握历史脉络。',
-    creationTips: [
-      '每个朝代配一个代表性人物。',
-      '加入朝代歌的配乐。'
-    ],
-    taskSteps: [
-      '1. 准备各朝代的地图或人物素材。',
-      '2. 按照时间顺序切换背景。',
-      '3. 同步播放朝代歌谣。',
-      '4. 点击朝代查看大事记。'
-    ]
-  },
 
   // 🌍 大千世界探索 (6 themes)
   {
@@ -762,48 +620,6 @@ export const THEMES: Theme[] = [
       '2. 在世界地图上高亮对应的国家。',
       '3. 介绍该美食的历史渊源。',
       '4. 播放当地的特色音乐。'
-    ]
-  },
-  {
-    id: 'w7',
-    title: '云朵观测站',
-    categoryId: 'exploration',
-    iconName: '☁️',
-    description: '识别天空中的云朵形状，预测天气变化。',
-    coreSkills: ['图像分类', '气象知识'],
-    challengeTask: '识别积雨云，并发出下雨预警。',
-    requiredBlocks: ['分类AI', '天气预测'],
-    highlight: '仰望天空，学习气象科学。',
-    creationTips: [
-      '收集卷云、积云、层云的图片。',
-      '结合谚语（如“朝霞不出门”）。'
-    ],
-    taskSteps: [
-      '1. 拍摄天空云朵照片。',
-      '2. 识别云朵类型。',
-      '3. 根据云朵判断未来天气。',
-      '4. 生成观测日记。'
-    ]
-  },
-  {
-    id: 'w8',
-    title: '昆虫微观世界',
-    categoryId: 'exploration',
-    iconName: '🐞',
-    description: '模拟放大镜，观察昆虫的身体结构和生活习性。',
-    coreSkills: ['图像放大', '生物知识'],
-    challengeTask: '观察蚂蚁搬家的过程，并记录下来。',
-    requiredBlocks: ['特效滤镜', '列表记录'],
-    highlight: '培养观察力和对生命的敬畏。',
-    creationTips: [
-      '制作昆虫视角的模拟器。',
-      '介绍昆虫的益虫/害虫属性。'
-    ],
-    taskSteps: [
-      '1. 移动“放大镜”角色。',
-      '2. 显示昆虫的局部特写。',
-      '3. 弹出昆虫的科普介绍。',
-      '4. 模拟昆虫的爬行轨迹。'
     ]
   },
 
@@ -934,48 +750,6 @@ export const THEMES: Theme[] = [
       '4. 生成游戏角色素材。'
     ]
   },
-  {
-    id: 'a7',
-    title: '泥塑3D打印',
-    categoryId: 'art',
-    iconName: '🏺',
-    description: '在屏幕上模拟捏泥人的过程，体验3D造型艺术。',
-    coreSkills: ['3D建模基础', '鼠标交互'],
-    challengeTask: '制作一个独特的陶艺花瓶。',
-    requiredBlocks: ['画笔粗细', '旋转特效'],
-    highlight: '体验传统工艺与现代技术的结合。',
-    creationTips: [
-      '模拟陶轮旋转的效果。',
-      '最后可以给作品上色。'
-    ],
-    taskSteps: [
-      '1. 绘制陶泥的基础形状。',
-      '2. 通过鼠标改变陶泥的宽窄。',
-      '3. 添加花纹和装饰。',
-      '4. 360度展示成品。'
-    ]
-  },
-  {
-    id: 'a8',
-    title: '电影海报生成',
-    categoryId: 'art',
-    iconName: '🎬',
-    description: '输入电影标题和类型，AI自动生成风格独特的海报。',
-    coreSkills: ['图像生成', '排版设计'],
-    challengeTask: '为你的科幻小说设计一张电影海报。',
-    requiredBlocks: ['AI绘图', '文字图章'],
-    highlight: '学习平面设计与AI创作的结合。',
-    creationTips: [
-      '尝试不同的艺术风格（赛博朋克、水墨）。',
-      '自动排版文字位置。'
-    ],
-    taskSteps: [
-      '1. 输入电影名称和简介。',
-      '2. 选择海报风格和色调。',
-      '3. AI生成背景图像。',
-      '4. 合成文字标题和演职员表。'
-    ]
-  },
 
   // 🚀 未来科技前沿 (6 themes)
   {
@@ -1102,48 +876,6 @@ export const THEMES: Theme[] = [
       '2. 生成随机密钥。',
       '3. 将明文转换为密文（加密）。',
       '4. 接收端使用密钥将密文还原（解密）。'
-    ]
-  },
-  {
-    id: 'f7',
-    title: '垂直农场管理',
-    categoryId: 'future',
-    iconName: '🥬',
-    description: '在摩天大楼里种植蔬菜，通过传感器控制光照和水分。',
-    coreSkills: ['自动化控制', '数据监测'],
-    challengeTask: '设计一个全自动的生菜种植系统。',
-    requiredBlocks: ['传感器模拟', '条件循环'],
-    highlight: '探索未来农业形态，解决粮食危机。',
-    creationTips: [
-      '模拟植物生长的周期。',
-      '调节LED灯的光谱颜色。'
-    ],
-    taskSteps: [
-      '1. 设置环境参数（温度、湿度、光照）。',
-      '2. 监测土壤湿度，自动浇水。',
-      '3. 根据植物生长阶段调节光照。',
-      '4. 收获成熟的蔬菜并计算产量。'
-    ]
-  },
-  {
-    id: 'f8',
-    title: '星际翻译官',
-    categoryId: 'future',
-    iconName: '👽',
-    description: '接收来自宇宙的神秘信号，并将其破译为人类语言。',
-    coreSkills: ['信号处理', '模式识别'],
-    challengeTask: '破译外星人发来的问候语。',
-    requiredBlocks: ['字符串操作', '声音可视化'],
-    highlight: '激发对地外文明的想象。',
-    creationTips: [
-      '设计一套外星文字符号。',
-      '加入摩斯密码的解密逻辑。'
-    ],
-    taskSteps: [
-      '1. 接收一段杂乱的音频信号。',
-      '2. 过滤噪音，提取有效波形。',
-      '3. 将波形转换为符号序列。',
-      '4. 对照密码本翻译出含义。'
     ]
   },
 
@@ -1274,48 +1006,6 @@ export const THEMES: Theme[] = [
       '4. 发射子弹并扣除敌人血量。'
     ]
   },
-  {
-    id: 'g7',
-    title: '节奏光剑VR',
-    categoryId: 'game',
-    iconName: '⚔️',
-    description: '模拟VR游戏体验，通过摄像头挥动手臂切开飞来的方块。',
-    coreSkills: ['视频侦测', '节奏同步'],
-    challengeTask: '跟随音乐节拍，切开所有红色方块。',
-    requiredBlocks: ['视频动作', '克隆体'],
-    highlight: '极具动感的体感游戏体验。',
-    creationTips: [
-      '方块上可以有箭头指示切割方向。',
-      '连击数越高得分越高。'
-    ],
-    taskSteps: [
-      '1. 开启摄像头，识别手部动作。',
-      '2. 生成跟随音乐节奏飞来的方块。',
-      '3. 检测手部与方块的碰撞。',
-      '4. 播放切割音效和粒子特效。'
-    ]
-  },
-  {
-    id: 'g8',
-    title: '贪吃蛇AI对战',
-    categoryId: 'game',
-    iconName: '🐍',
-    description: '编写AI算法控制贪吃蛇自动觅食，与人类玩家对战。',
-    coreSkills: ['寻路算法', '博弈策略'],
-    challengeTask: '设计一条永远不会撞墙的智能贪吃蛇。',
-    requiredBlocks: ['列表路径', '距离判断'],
-    highlight: '从玩游戏进阶到设计游戏AI。',
-    creationTips: [
-      'AI蛇会优先吃离得近的食物。',
-      '当身体太长时，AI懂得绕圈躲避。'
-    ],
-    taskSteps: [
-      '1. 编写蛇的移动和吃食物逻辑。',
-      '2. 加入AI控制的对手蛇。',
-      '3. 编写AI寻找食物的最短路径。',
-      '4. 避免撞到自己或墙壁。'
-    ]
-  },
 
   // 🏥 健康运动俱乐部 (6 themes)
   {
@@ -1442,48 +1132,6 @@ export const THEMES: Theme[] = [
       '2. 根据用户选项计算压力分值。',
       '3. 结合面部表情分析辅助判断。',
       '4. 推荐适合的放松音乐或冥想引导。'
-    ]
-  },
-  {
-    id: 'h7',
-    title: '喝水提醒助手',
-    categoryId: 'health',
-    iconName: '💧',
-    description: '根据你的体重和运动量，计算每日所需水量并定时提醒。',
-    coreSkills: ['变量计算', '定时任务'],
-    challengeTask: '制作一个可爱的水杯精灵，提醒你喝水。',
-    requiredBlocks: ['计时器', '通知提醒'],
-    highlight: '养成健康的生活习惯。',
-    creationTips: [
-      '每次喝水后，水杯精灵会长大一点。',
-      '显示当天的喝水进度条。'
-    ],
-    taskSteps: [
-      '1. 输入体重和运动时长。',
-      '2. 计算目标饮水量。',
-      '3. 设定每隔1小时提醒一次。',
-      '4. 点击按钮记录喝水量。'
-    ]
-  },
-  {
-    id: 'h8',
-    title: '疫苗接种档案',
-    categoryId: 'health',
-    iconName: '💉',
-    description: '记录疫苗接种时间和种类，科普疫苗对人体免疫的作用。',
-    coreSkills: ['数据库管理', '科普动画'],
-    challengeTask: '制作一个疫苗接种电子本，并演示抗体产生过程。',
-    requiredBlocks: ['列表操作', '动画演示'],
-    highlight: '理解免疫学原理，消除打针恐惧。',
-    creationTips: [
-      '用动画演示白细胞与病毒的战斗。',
-      '提醒下一次接种的时间。'
-    ],
-    taskSteps: [
-      '1. 建立疫苗种类列表。',
-      '2. 记录接种日期和批号。',
-      '3. 演示疫苗进入人体后的反应。',
-      '4. 生成电子接种证书。'
     ]
   },
 
@@ -1614,48 +1262,6 @@ export const THEMES: Theme[] = [
       '4. 配上字幕和旁白。'
     ]
   },
-  {
-    id: 's7',
-    title: '诗词接龙大会',
-    categoryId: 'story',
-    iconName: '📜',
-    description: '与AI进行飞花令对决，看谁知道的诗句更多。',
-    coreSkills: ['文本匹配', '数据库查询'],
-    challengeTask: '设计一个“花”字飞花令游戏。',
-    requiredBlocks: ['包含文本', '列表查询'],
-    highlight: '在游戏中积累古诗词储备。',
-    creationTips: [
-      'AI可以说出诗句的出处和作者。',
-      '设置倒计时增加紧张感。'
-    ],
-    taskSteps: [
-      '1. 设定接龙的关键词（如“月”、“春”）。',
-      '2. 玩家输入诗句，系统判断是否包含关键词。',
-      '3. AI从数据库中检索符合条件的诗句回复。',
-      '4. 无法接上的一方失败。'
-    ]
-  },
-  {
-    id: 's8',
-    title: '广告文案大师',
-    categoryId: 'story',
-    iconName: '📢',
-    description: '输入产品名称和特点，AI自动生成吸引人的广告语。',
-    coreSkills: ['创意写作', '营销思维'],
-    challengeTask: '为一款“隐形斗篷”设计广告词。',
-    requiredBlocks: ['AI对话', '文本排版'],
-    highlight: '锻炼商业思维和语言表达能力。',
-    creationTips: [
-      '选择不同的广告风格（幽默、感人、夸张）。',
-      '生成配套的广告海报背景。'
-    ],
-    taskSteps: [
-      '1. 输入产品名称（如“飞天扫帚”）。',
-      '2. 选择目标用户群体（学生、上班族）。',
-      '3. AI生成3条不同风格的广告语。',
-      '4. 展示在模拟的广告牌上。'
-    ]
-  },
 
   // 🛡️ 安全守护联盟 (6 themes)
   {
@@ -1782,388 +1388,6 @@ export const THEMES: Theme[] = [
       '2. 设定特定的触发手势（如长按）。',
       '3. 触发后发送求助信号（模拟）。',
       '4. 开启麦克风录音并黑屏省电。'
-    ]
-  },
-  {
-    id: 'sa7',
-    title: '隐私密码锁',
-    categoryId: 'safety',
-    iconName: '🔒',
-    description: '学习密码学原理，制作一个多重加密的数字保险箱。',
-    coreSkills: ['逻辑运算', '变量加密'],
-    challengeTask: '设计一个需要回答三个安全问题才能打开的锁。',
-    requiredBlocks: ['询问回答', '逻辑与'],
-    highlight: '强化信息安全意识，保护个人隐私。',
-    creationTips: [
-      '密码输入错误3次锁定系统。',
-      '加入指纹识别（模拟）功能。'
-    ],
-    taskSteps: [
-      '1. 设置初始密码和安全问题。',
-      '2. 用户输入密码进行比对。',
-      '3. 密码正确后进入第二道验证。',
-      '4. 全部通过后播放开锁动画。'
-    ]
-  },
-  {
-    id: 'sa8',
-    title: '紧急逃生路线',
-    categoryId: 'safety',
-    iconName: '🏃',
-    description: '模拟火灾现场，规划从教室到操场的最短安全逃生路线。',
-    coreSkills: ['路径规划', '模拟演练'],
-    challengeTask: '在迷宫中找到安全出口，避开烟雾区域。',
-    requiredBlocks: ['画笔路径', '碰撞检测'],
-    highlight: '熟悉逃生技能，临危不乱。',
-    creationTips: [
-      '烟雾会随时间扩散。',
-      '提示弯腰捂口鼻的动作。'
-    ],
-    taskSteps: [
-      '1. 绘制学校平面图。',
-      '2. 标记起火点和安全出口。',
-      '3. 玩家控制角色沿安全路线移动。',
-      '4. 到达安全区域后显示用时。'
-    ]
-  },
-
-  // 🌿 环保绿色家园 (8 themes)
-  {
-    id: 'env1',
-    title: '碳足迹计算器',
-    categoryId: 'environment',
-    iconName: '👣',
-    description: '计算你一天的碳排放量，并给出减排建议。',
-    coreSkills: ['变量计算', '数据可视化'],
-    challengeTask: '输入今天的出行方式和用电量，计算碳积分。',
-    requiredBlocks: ['询问回答', '变量操作'],
-    highlight: '量化环保行为，倡导低碳生活。',
-    creationTips: [
-      '不同交通工具对应不同排放系数。',
-      '用树苗成长的动画作为奖励。'
-    ],
-    taskSteps: [
-      '1. 询问用户的出行方式（公交、私家车）。',
-      '2. 询问用电时长。',
-      '3. 根据公式计算碳排放总量。',
-      '4. 给出相应的环保建议。'
-    ]
-  },
-  {
-    id: 'env2',
-    title: '海洋垃圾清理船',
-    categoryId: 'environment',
-    iconName: '🚢',
-    description: '设计一艘自动巡航的清洁船，清理海洋表面的塑料垃圾。',
-    coreSkills: ['自动巡航', '物体检测'],
-    challengeTask: '让清洁船自动避开鱼群，只收集塑料瓶。',
-    requiredBlocks: ['侦测距离', '条件判断'],
-    highlight: '保护海洋生态，减少白色污染。',
-    creationTips: [
-      '加入太阳能充电的设定。',
-      '收集到的垃圾可以分类回收。'
-    ],
-    taskSteps: [
-      '1. 设置清洁船在海面随机移动。',
-      '2. 当侦测到垃圾时，前往收集。',
-      '3. 当侦测到海洋生物时，转向避让。',
-      '4. 记录清理垃圾的重量。'
-    ]
-  },
-  {
-    id: 'env3',
-    title: '濒危动物守护者',
-    categoryId: 'environment',
-    iconName: '🐼',
-    description: '建立濒危动物保护区，通过摄像头监测偷猎者。',
-    coreSkills: ['图像识别', '报警系统'],
-    challengeTask: '识别画面中的大熊猫，并记录它的活动。',
-    requiredBlocks: ['分类AI', '列表记录'],
-    highlight: '保护生物多样性，维护生态平衡。',
-    creationTips: [
-      '介绍每种濒危动物的生存现状。',
-      '模拟野外红外相机的工作原理。'
-    ],
-    taskSteps: [
-      '1. 训练模型识别大熊猫、金丝猴等。',
-      '2. 开启摄像头模拟监控。',
-      '3. 识别到动物时拍照存档。',
-      '4. 识别到陌生人时发出警报。'
-    ]
-  },
-  {
-    id: 'env4',
-    title: '智能灌溉系统',
-    categoryId: 'environment',
-    iconName: '🚿',
-    description: '根据土壤湿度和天气预报，自动控制农田灌溉，节约用水。',
-    coreSkills: ['传感器模拟', '逻辑控制'],
-    challengeTask: '设计一个既不让植物干枯，又不浪费水的系统。',
-    requiredBlocks: ['变量监测', '天气API'],
-    highlight: '智慧农业，科学利用水资源。',
-    creationTips: [
-      '模拟下雨天自动停止灌溉。',
-      '显示节约了多少升水。'
-    ],
-    taskSteps: [
-      '1. 设置土壤湿度变量随时间下降。',
-      '2. 获取天气预报信息。',
-      '3. 当湿度低于阈值且无雨时，开启水泵。',
-      '4. 湿度达标后自动关闭。'
-    ]
-  },
-  {
-    id: 'env5',
-    title: '旧衣改造设计师',
-    categoryId: 'environment',
-    iconName: '👕',
-    description: '拍照识别旧衣服，AI推荐改造方案，变废为宝。',
-    coreSkills: ['图像识别', '创意生成'],
-    challengeTask: '把一件旧T恤改造成环保购物袋。',
-    requiredBlocks: ['AI对话', '图像编辑'],
-    highlight: '循环利用资源，减少时尚浪费。',
-    creationTips: [
-      '提供裁剪和缝纫的步骤图解。',
-      '展示改造前后的对比图。'
-    ],
-    taskSteps: [
-      '1. 拍照上传旧衣物。',
-      '2. AI分析衣物材质和款式。',
-      '3. 生成3种改造方案供选择。',
-      '4. 播放选定方案的制作教程。'
-    ]
-  },
-  {
-    id: 'env6',
-    title: '空气质量监测站',
-    categoryId: 'environment',
-    iconName: '🌫️',
-    description: '获取实时空气质量数据(PM2.5)，用颜色变化展示污染程度。',
-    coreSkills: ['网络请求', '数据可视化'],
-    challengeTask: '制作一个随空气质量变色的城市夜景图。',
-    requiredBlocks: ['获取天气', '颜色特效'],
-    highlight: '关注大气环境，呼吸新鲜空气。',
-    creationTips: [
-      '空气好时显示蓝天白云。',
-      '污染严重时提示佩戴口罩。'
-    ],
-    taskSteps: [
-      '1. 调用API获取当地PM2.5数值。',
-      '2. 设定数值与颜色的对应关系。',
-      '3. 改变背景天空的颜色。',
-      '4. 给出出行建议。'
-    ]
-  },
-  {
-    id: 'env7',
-    title: '光盘行动打卡',
-    categoryId: 'environment',
-    iconName: '🍽️',
-    description: '餐后拍照识别盘子是否光盘，养成节约粮食好习惯。',
-    coreSkills: ['图像分类', '习惯养成'],
-    challengeTask: '连续打卡7天光盘，获得“节约大使”称号。',
-    requiredBlocks: ['分类AI', '日历记录'],
-    highlight: '一粥一饭，当思来处不易。',
-    creationTips: [
-      '识别“光盘”和“剩饭”两种状态。',
-      '打卡成功播放欢呼音效。'
-    ],
-    taskSteps: [
-      '1. 训练模型识别光盘和有剩饭的盘子。',
-      '2. 用户上传餐后照片。',
-      '3. 识别成功后在日历上打勾。',
-      '4. 累计打卡天数并发放奖励。'
-    ]
-  },
-  {
-    id: 'env8',
-    title: '森林防火卫士',
-    categoryId: 'environment',
-    iconName: '🔥',
-    description: '利用无人机巡逻森林，识别烟雾和火源，及时报警。',
-    coreSkills: ['物体检测', '路径规划'],
-    challengeTask: '在火势蔓延前，指挥无人机投掷灭火弹。',
-    requiredBlocks: ['视频侦测', '克隆体'],
-    highlight: '守护绿色森林，防患于未然。',
-    creationTips: [
-      '模拟风向对火势的影响。',
-      '无人机需要返回基地充电。'
-    ],
-    taskSteps: [
-      '1. 设置无人机自动巡航路线。',
-      '2. 随机生成火源点。',
-      '3. 无人机检测到红色/烟雾时报警。',
-      '4. 飞往火源上方投掷灭火弹。'
-    ]
-  },
-
-  // 📜 传统文化传承 (8 themes)
-  {
-    id: 'cul1',
-    title: '京剧脸谱变脸',
-    categoryId: 'culture',
-    iconName: '🎭',
-    description: '识别面部表情，自动切换不同的京剧脸谱，体验川剧变脸。',
-    coreSkills: ['人脸追踪', '造型切换'],
-    challengeTask: '眨眼变红脸，张嘴变黑脸。',
-    requiredBlocks: ['人脸识别', '条件判断'],
-    highlight: '感受国粹魅力，体验非遗技艺。',
-    creationTips: [
-      '介绍不同颜色脸谱代表的性格（红忠、黑直、白奸）。',
-      '配上京剧锣鼓的音效。'
-    ],
-    taskSteps: [
-      '1. 开启摄像头追踪人脸位置。',
-      '2. 将脸谱素材贴合在面部。',
-      '3. 检测眨眼、张嘴等表情动作。',
-      '4. 触发动作时瞬间切换脸谱造型。'
-    ]
-  },
-  {
-    id: 'cul2',
-    title: '成语接龙大闯关',
-    categoryId: 'culture',
-    iconName: '📖',
-    description: '与AI进行成语接龙对战，学习成语典故。',
-    coreSkills: ['文本处理', '数据库查询'],
-    challengeTask: '坚持10轮不输给AI，成为成语状元。',
-    requiredBlocks: ['AI对话', '列表包含'],
-    highlight: '积累词汇量，传承中华语言艺术。',
-    creationTips: [
-      'AI可以解释成语的含义和出处。',
-      '设置不同难度（允许同音字接龙）。'
-    ],
-    taskSteps: [
-      '1. 玩家输入一个成语。',
-      '2. 验证成语是否存在且首尾相接。',
-      '3. AI从库中检索接龙成语回复。',
-      '4. 无法接龙时游戏结束。'
-    ]
-  },
-  {
-    id: 'cul3',
-    title: '皮影戏编导',
-    categoryId: 'culture',
-    iconName: '🎬',
-    description: '在数字舞台上操控皮影人物，演绎经典传说故事。',
-    coreSkills: ['骨骼动画', '键盘控制'],
-    challengeTask: '排演一出《三打白骨精》的皮影戏。',
-    requiredBlocks: ['按键事件', '角色移动'],
-    highlight: '让古老的皮影戏在屏幕上复活。',
-    creationTips: [
-      '模拟幕布后的光影效果。',
-      '关节连接处要灵活自然。'
-    ],
-    taskSteps: [
-      '1. 绘制皮影角色的各个部件。',
-      '2. 组合部件并设置旋转中心。',
-      '3. 编写按键控制肢体动作的脚本。',
-      '4. 配合背景音乐进行表演。'
-    ]
-  },
-  {
-    id: 'cul4',
-    title: '中华美食制作',
-    categoryId: 'culture',
-    iconName: '🥟',
-    description: '模拟包饺子、做月饼的过程，了解传统节日习俗。',
-    coreSkills: ['步骤引导', '交互模拟'],
-    challengeTask: '在冬至这天，包一盘热气腾腾的饺子。',
-    requiredBlocks: ['鼠标拖拽', '造型切换'],
-    highlight: '体验民俗文化，感受节日氛围。',
-    creationTips: [
-      '介绍不同节日吃不同食物的寓意。',
-      '加入烹饪时的咕嘟咕嘟声。'
-    ],
-    taskSteps: [
-      '1. 准备面粉、馅料等素材。',
-      '2. 模拟擀皮、包馅的动作。',
-      '3. 拖拽饺子入锅煮熟。',
-      '4. 展示成品并介绍习俗由来。'
-    ]
-  },
-  {
-    id: 'cul5',
-    title: '书法临摹打分',
-    categoryId: 'culture',
-    iconName: '🖌️',
-    description: '在屏幕上临摹名家书法，AI分析笔画相似度并打分。',
-    coreSkills: ['轨迹识别', '图像比对'],
-    challengeTask: '临摹“永”字八法，争取获得90分以上。',
-    requiredBlocks: ['画笔绘图', '颜色侦测'],
-    highlight: '修身养性，领略汉字书法之美。',
-    creationTips: [
-      '提供米字格背景辅助。',
-      '笔触要有粗细变化（模拟毛笔）。'
-    ],
-    taskSteps: [
-      '1. 展示标准字帖（半透明）。',
-      '2. 用户控制画笔进行描红。',
-      '3. 计算用户笔迹与范字的重合度。',
-      '4. 给出评分和改进建议。'
-    ]
-  },
-  {
-    id: 'cul6',
-    title: '二十四节气科普',
-    categoryId: 'culture',
-    iconName: '🗓️',
-    description: '制作交互式日历，展示每个节气的气候特点和农事活动。',
-    coreSkills: ['时间日期', '多媒体展示'],
-    challengeTask: '点击节气名称，播放对应的古诗配画。',
-    requiredBlocks: ['点击事件', '背景切换'],
-    highlight: '顺应天时，学习古人的生存智慧。',
-    creationTips: [
-      '背景随节气变化（春暖花开、大雪纷飞）。',
-      '加入节气歌朗诵。'
-    ],
-    taskSteps: [
-      '1. 绘制二十四节气转盘。',
-      '2. 点击某个节气，切换背景图。',
-      '3. 显示该节气的物候特征（如惊蛰始雷）。',
-      '4. 播放相关的农谚或诗词。'
-    ]
-  },
-  {
-    id: 'cul7',
-    title: '榫卯结构解密',
-    categoryId: 'culture',
-    iconName: '🪵',
-    description: '3D展示榫卯拼接过程，不用一钉一胶搭建建筑。',
-    coreSkills: ['3D空间思维', '逻辑组合'],
-    challengeTask: '成功拼合一个鲁班锁。',
-    requiredBlocks: ['拖拽拼接', '碰撞检测'],
-    highlight: '惊叹于中国古代建筑的精巧结构。',
-    creationTips: [
-      '支持360度旋转观察零件。',
-      '拼合成功有清脆的木头撞击声。'
-    ],
-    taskSteps: [
-      '1. 展示拆解开的榫卯零件。',
-      '2. 观察凹凸结构，判断拼接顺序。',
-      '3. 拖拽零件到正确位置。',
-      '4. 演示完整的拼接动画。'
-    ]
-  },
-  {
-    id: 'cul8',
-    title: '民族服饰换装',
-    categoryId: 'culture',
-    iconName: '👗',
-    description: '识别你的身形，为你“穿”上各个民族的特色服装。',
-    coreSkills: ['人体分割', '图像合成'],
-    challengeTask: '试穿苗族银饰服饰，并拍照留念。',
-    requiredBlocks: ['视频侦测', '造型切换'],
-    highlight: '五十六个民族，五十六朵花。',
-    creationTips: [
-      '介绍该民族的分布地区和风俗。',
-      '服饰要精美还原细节。'
-    ],
-    taskSteps: [
-      '1. 开启摄像头获取全身像。',
-      '2. 选择想要试穿的民族服装。',
-      '3. 自动调整服装大小以贴合身体。',
-      '4. 生成精美的试穿海报。'
     ]
   }
 ];
